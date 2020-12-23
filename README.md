@@ -2,7 +2,7 @@
 A calculator able to parse equations and perform complex mathematical operations
 
 ## Overview
-This program is build off of the `Node` class, which contains all the mathematical methods:
+This program is built off of the `Node` class, which contains all the mathematical methods:
 * `double calculate(double x)`
 * `double slopeAt(double x)`
 * `double definiteIntegral(int a, int b)`

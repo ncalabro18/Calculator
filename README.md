@@ -1,18 +1,44 @@
-# Calculator
-A calculator able to parse equations and perform complex mathematical operations
 
-## Overview
-This program is built off of the `Node` class, which contains all the mathematical methods:
-* `double calculate(double x)`
-* `double slopeAt(double x)`
-* `double definiteIntegral(int a, int b)`
-* `double sum(int n, int endn)`
-* `double sum(int n, double precision)`
-* `Node taylorExpansion(int k, double c) `
-* `Node maclaurinExpansion(int k) `
-* `Node calculateDerivative()`
+# Calculator
+A calculator able to parse equations into an expression tree and perform calculus operations.
+
+
+### Overview
+
+The `Node` class is responsible for the expression tree data and operations on the tree,
+		which contains mathematical methods from a typical calculus II curriculum.
+The `Equation` class parses a string into an expression tree. It is a subclass of `Node`.
+
+
+### Operations
+
+Value of x calculated by the given node tree.
+`double calculate(double x)`
+
+Derivative value at the point x.
+`double slopeAt(double x)`
+
+Accurate approximation of the area under a curve between two points.
+`double definiteIntegral(double a, double b)`
+
+Calculates the sum from n to endN, both inclusive.
+`double sum(int n, int endn)`
+
+Calculates the sum of values starting from n, n+1, etc until the change is less than precision.
+`double sum(int n, double precision)`
+
+Generates a taylor expansion with k iterations and at point c.
+`Node taylorExpansion(int k, double c)`
+
+Generates a maclaurin expansion with k iterations.
+`Node maclaurinExpansion(int k)`
+
+Creates a new Equation Node based off the derivative of the calling Node Equation.
+`Node calculateDerivative()`
   
-  In order to parse a String into a Node tree, the `Equation(String)` constructor can be used. 
+
+
+  To parse a String into a Node tree, the `Equation(String)` constructor is used. 
 Node is the superclass of Equation, so all the methods in Node can be called from
 an Equation object.
 

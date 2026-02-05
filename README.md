@@ -13,27 +13,35 @@ The `Equation` class parses a string into an expression tree. It is a subclass o
 ### Operations
 
 Value of x calculated by the given node tree.
+
 `double calculate(double x)`
 
 Derivative value at the point x.
+
 `double slopeAt(double x)`
 
 Accurate approximation of the area under a curve between two points.
+
 `double definiteIntegral(double a, double b)`
 
 Calculates the sum from n to endN, both inclusive.
+
 `double sum(int n, int endn)`
 
 Calculates the sum of values starting from n, n+1, etc until the change is less than precision.
+
 `double sum(int n, double precision)`
 
 Generates a taylor expansion with k iterations and at point c.
+
 `Node taylorExpansion(int k, double c)`
 
 Generates a maclaurin expansion with k iterations.
+
 `Node maclaurinExpansion(int k)`
 
 Creates a new Equation Node based off the derivative of the calling Node Equation.
+
 `Node calculateDerivative()`
   
 
